@@ -1,0 +1,85 @@
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+#include <stdlib.h>
+#include <conio.h>
+
+using namespace std;
+
+int shuffle(int,int);
+void oneplayer(void);
+
+int main()
+{system ("COLOR A");
+
+    cout<<"\t\t\t\t\t\t***********"<<endl;
+cout<<endl;
+cout<<"\t\t\t\t\t\tBARBUT 69"<<endl;
+cout<<endl;
+cout<<"\t\t\t\t\t\t***********"<<endl;
+char var;
+cout<<"Press P to play, Q to quit"<<endl;
+cin>>var;
+if(var=='P' or var=='p'){
+        int var2;
+
+    cout<<"1: one player "<<endl;
+    cout<<"2: two players "<<endl;
+    cout<<"3: one players "<<endl;
+    cout<<"4: one players "<<endl;
+
+    cin>>var2;
+switch(var2){
+    case 1:{
+        system ("cls");
+        cout<<"1 player"<<endl;
+        getch();
+        }
+    break;
+    case 2:{
+        system ("cls");
+        cout<<"2 players"<<endl;
+        getch();
+        }
+    break;
+    case 3:{
+        system ("cls");
+        cout<<"3 players"<<endl;
+        getch();
+        }
+    break;
+    case 4:{
+        system ("cls");
+        cout<<"4 players"<<endl;
+        getch();
+        }
+    break;
+}
+}
+if(var=='Q' or var=='q')
+{
+  system("cls");
+  cout<<"terminated...";
+  getch();
+  return 0;
+}
+
+}
+
+
+int shuffle(int min, int max) //range : [min, max)
+{
+   static bool first = true;
+   if (first)
+   {
+      srand( time(NULL) ); //seeding for the first time only!
+      first = false;
+   }
+   return min + rand() % (( max + 1 ) - min);
+}
+
+void oneplayer()
+{
+
+}
+
